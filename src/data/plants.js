@@ -1,0 +1,88 @@
+// All prices are in USD. These are sample products for the course project.
+export const plants = [
+  {
+    id: 'monstera',
+    name: 'Monstera Deliciosa',
+    category: 'Air Purifying Plants',
+    description: 'Iconic split leaves, easygoing nature, and instant jungle energy.',
+    price: 24,
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85',
+    tag: 'Bestseller',
+  },
+  {
+    id: 'snake-plant',
+    name: 'Snake Plant',
+    category: 'Air Purifying Plants',
+    description: 'Architectural foliage that is happy with very little attention.',
+    price: 19,
+    image: 'https://images.unsplash.com/photo-1593482892290-f54927ae2b7d?auto=format&fit=crop&w=900&q=85',
+    tag: 'Beginner friendly',
+  },
+  {
+    id: 'peace-lily',
+    name: 'Peace Lily',
+    category: 'Air Purifying Plants',
+    description: 'Rich green leaves and graceful white blooms for calm corners.',
+    price: 27,
+    image: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85',
+    tag: 'Popular',
+  },
+  {
+    id: 'lavender',
+    name: 'English Lavender',
+    category: 'Aromatic Plants',
+    description: 'A soothing floral scent and delicate purple blooms.',
+    price: 16,
+    image: 'https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=900&q=85',
+    tag: 'Fragrant',
+  },
+  {
+    id: 'rosemary',
+    name: 'Rosemary',
+    category: 'Aromatic Plants',
+    description: 'Fresh herbal fragrance from a sunny kitchen-window favorite.',
+    price: 14,
+    image: 'https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=900&q=85',
+    tag: 'Kitchen favorite',
+  },
+  {
+    id: 'mint',
+    name: 'Fresh Mint',
+    category: 'Aromatic Plants',
+    description: 'Bright, refreshing leaves for teas and everyday cooking.',
+    price: 12,
+    image: 'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=900&q=85',
+    tag: 'Fresh pick',
+  },
+  {
+    id: 'aloe-vera',
+    name: 'Aloe Vera',
+    category: 'Low Maintenance Plants',
+    description: 'A sun-loving succulent with bold, sculptural leaves.',
+    price: 18,
+    image: 'https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=900&q=85',
+    tag: 'Easy care',
+  },
+  {
+    id: 'zz-plant',
+    name: 'ZZ Plant',
+    category: 'Low Maintenance Plants',
+    description: 'Glossy leaves that thrive even in lower-light spaces.',
+    price: 22,
+    image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=85',
+    tag: 'Low light',
+  },
+  {
+    id: 'pothos',
+    name: 'Golden Pothos',
+    category: 'Low Maintenance Plants',
+    description: 'Trailing vines and heart-shaped leaves for shelves and planters.',
+    price: 17,
+    image: 'https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&w=900&q=85',
+    tag: 'Easy care',
+  },
+];
+
+export const categories = [...new Set(plants.map((plant) => plant.category))];
+export const formatPrice = (amount) =>
+  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
